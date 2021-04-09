@@ -4,12 +4,12 @@
 
 # Site
 title: 八九天
-subtitle: '春暖花开，八九天！'
-description: ''
+subtitle: ''
+description: '春暖花开，八九天！'
 keywords:
 author: Whwtf
-language: zh-cn
-timezone: 'Asian/Shanghai'
+language: zh-CN
+timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
