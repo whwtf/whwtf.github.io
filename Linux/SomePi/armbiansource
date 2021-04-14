@@ -21,7 +21,7 @@
   <meta name="description" content="Armbian是 @armbian.com] 专为RaspberryPi、NanaoPi、RockPi……这类使用arm soc的微小计算机&#x2F;开发板编译制作的操作系统。运行稳定，功能强大。内置armbian-config配置程序，可以方便的对系统进行设置和安装一些第三方软件。 Armbian安装从 armbian官网 下载对应的系统镜像文件，用烧卡软件写入到TF卡中。个人认为 Etcher 比较好">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Armbian 安装并改为国内软件源">
-<meta property="og:url" content="http://blog.whwtf.com/SomePi/Linux/armbiansource">
+<meta property="og:url" content="http://blog.whwtf.com/Linux/SomePi/armbiansource">
 <meta property="og:site_name" content="八九天">
 <meta property="og:description" content="Armbian是 @armbian.com] 专为RaspberryPi、NanaoPi、RockPi……这类使用arm soc的微小计算机&#x2F;开发板编译制作的操作系统。运行稳定，功能强大。内置armbian-config配置程序，可以方便的对系统进行设置和安装一些第三方软件。 Armbian安装从 armbian官网 下载对应的系统镜像文件，用烧卡软件写入到TF卡中。个人认为 Etcher 比较好">
 <meta property="og:locale" content="zh_CN">
@@ -29,13 +29,13 @@
 <meta property="og:image" content="https://gitee.com/whwtf/upic/raw/master/uPic/soft2020-09-25.png">
 <meta property="og:image" content="https://gitee.com/whwtf/upic/raw/master/uPic/etcher2020-09-25.png">
 <meta property="article:published_time" content="2021-04-14T03:17:54.000Z">
-<meta property="article:modified_time" content="2021-04-14T03:47:09.297Z">
+<meta property="article:modified_time" content="2021-04-14T03:50:37.717Z">
 <meta property="article:author" content="Whwtf">
 <meta property="article:tag" content="Armbian">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://gitee.com/whwtf/upic/raw/master/uPic/armbian-config2020-09-25.png">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://blog.whwtf.com/SomePi/Linux/armbiansource">
+  <link rel="canonical" href="http://blog.whwtf.com/Linux/SomePi/armbiansource">
   
     <link rel="alternate" href="/atom.xml" title="八九天" type="application/atom+xml">
   
@@ -203,7 +203,7 @@
   <div class="widget">
     <h3 class="widget-title">分类</h3>
     <div class="widget-body">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/SomePi/">SomePi</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/SomePi/Linux/">Linux</a><span class="category-list-count">1</span></li></ul></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/SomePi/">SomePi</a><span class="category-list-count">1</span></li></ul></li></ul>
     </div>
   </div>
 
@@ -248,10 +248,10 @@
             
             <div class="item-inner">
               <p class="item-category">
-                <a class="category-link" href="/categories/SomePi/">SomePi</a><i class="icon icon-angle-right"></i><a class="category-link" href="/categories/SomePi/Linux/">Linux</a>
+                <a class="category-link" href="/categories/Linux/">Linux</a><i class="icon icon-angle-right"></i><a class="category-link" href="/categories/Linux/SomePi/">SomePi</a>
               </p>
               <p class="item-title">
-                <a href="/SomePi/Linux/armbiansource" class="title">Armbian 安装并改为国内软件源</a>
+                <a href="/Linux/SomePi/armbiansource" class="title">Armbian 安装并改为国内软件源</a>
               </p>
               <p class="item-date">
                 <time datetime="2021-04-14T03:17:54.000Z" itemprop="datePublished">2021-04-14</time>
@@ -302,14 +302,14 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/SomePi/Linux/armbiansource" class="article-date">
+	<a href="/Linux/SomePi/armbiansource" class="article-date">
 	  <time datetime="2021-04-14T03:17:54.000Z" itemprop="datePublished">2021-04-14</time>
 	</a>
 </span>
         
   <span class="article-category">
     <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="/categories/SomePi/">SomePi</a>►<a class="article-category-link" href="/categories/SomePi/Linux/">Linux</a>
+    <a class="article-category-link" href="/categories/Linux/">Linux</a>►<a class="article-category-link" href="/categories/Linux/SomePi/">SomePi</a>
   </span>
 
         
@@ -321,7 +321,7 @@
 
         
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/SomePi/Linux/armbiansource#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/Linux/SomePi/armbiansource#comments" class="article-comment-link">评论</a></span>
         
       </div>
     </div>
@@ -357,7 +357,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="http://blog.whwtf.com/SomePi/Linux/armbiansource" title="Armbian 安装并改为国内软件源" target="_blank" rel="external">http://blog.whwtf.com/SomePi/Linux/armbiansource</a>
+      <a href="http://blog.whwtf.com/Linux/SomePi/armbiansource" title="Armbian 安装并改为国内软件源" target="_blank" rel="external">http://blog.whwtf.com/Linux/SomePi/armbiansource</a>
     </li>
     
     <li class="post-copyright-license">
