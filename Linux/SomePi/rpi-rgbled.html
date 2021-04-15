@@ -17,20 +17,22 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>about | 八九天</title>
-  <meta name="description" content="春暖花开，八九天！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="http://blog.whwtf.com/about/index.html">
+  <title>在树莓派上操作 rgbLED 显示不同颜色 | 八九天</title>
+  <meta name="description" content="常见的 rgbLED 有四根引脚，一个 GND，另外三个分别是红绿蓝三色控制脚。通常由输入的电压不同来显示不同的颜色。但是树莓派的 GPIO 输出的是数字信号，这里可以用编程的方式来模拟电压的变化。树莓派上用 PWM（脉宽调制）方法来实现，这是一种对模拟信号电平进行数字编码的方法。PWM 可以简单理解为，通过可控频率的高低电平切换来实现模拟电压变化的方法。 12345678910111213141">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在树莓派上操作 rgbLED 显示不同颜色">
+<meta property="og:url" content="http://blog.whwtf.com/Linux/SomePi/rpi-rgbled.html">
 <meta property="og:site_name" content="八九天">
-<meta property="og:description" content="春暖花开，八九天！">
+<meta property="og:description" content="常见的 rgbLED 有四根引脚，一个 GND，另外三个分别是红绿蓝三色控制脚。通常由输入的电压不同来显示不同的颜色。但是树莓派的 GPIO 输出的是数字信号，这里可以用编程的方式来模拟电压的变化。树莓派上用 PWM（脉宽调制）方法来实现，这是一种对模拟信号电平进行数字编码的方法。PWM 可以简单理解为，通过可控频率的高低电平切换来实现模拟电压变化的方法。 12345678910111213141">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-04-09T10:21:20.000Z">
-<meta property="article:modified_time" content="2021-04-14T02:54:08.380Z">
+<meta property="article:published_time" content="2021-04-15T03:52:17.000Z">
+<meta property="article:modified_time" content="2021-04-15T03:53:39.277Z">
 <meta property="article:author" content="Whwtf">
+<meta property="article:tag" content="RaspberryPi">
+<meta property="article:tag" content="rgbLED">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://blog.whwtf.com/about/index.html">
+  <link rel="canonical" href="http://blog.whwtf.com/Linux/SomePi/rpi-rgbled.html">
   
     <link rel="alternate" href="/atom.xml" title="八九天" type="application/atom+xml">
   
@@ -327,14 +329,14 @@
   
 <main class="main" role="main">
   <div class="content">
-  <article id="page-" class="article article-type-page" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-rpi-rgbled" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      about
+      在树莓派上操作 rgbLED 显示不同颜色
     </h1>
   
 
@@ -342,22 +344,34 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/about/index.html" class="article-date">
-	  <time datetime="2021-04-09T10:21:20.000Z" itemprop="datePublished">2021-04-09</time>
+	<a href="/Linux/SomePi/rpi-rgbled.html" class="article-date">
+	  <time datetime="2021-04-15T03:52:17.000Z" itemprop="datePublished">2021-04-15</time>
 	</a>
 </span>
         
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/Linux/">Linux</a>►<a class="article-category-link" href="/categories/Linux/SomePi/">SomePi</a>
+  </span>
+
         
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/RaspberryPi/" rel="tag">RaspberryPi</a>, <a class="article-tag-link-link" href="/tags/rgbLED/" rel="tag">rgbLED</a>
+  </span>
+
 
         
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/about/index.html#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/Linux/SomePi/rpi-rgbled.html#comments" class="article-comment-link">评论</a></span>
         
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        
+        <p>常见的 rgbLED 有四根引脚，一个 GND，另外三个分别是红绿蓝三色控制脚。通常由输入的电压不同来显示不同的颜色。但是树莓派的 GPIO 输出的是数字信号，这里可以用编程的方式来模拟电压的变化。<br>树莓派上用 PWM（脉宽调制）方法来实现，这是一种对模拟信号电平进行数字编码的方法。PWM 可以简单理解为，通过可控频率的高低电平切换来实现模拟电压变化的方法。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><span class="line">import RPi.GPIO as GPIO</span><br><span class="line">import time</span><br><span class="line"></span><br><span class="line">R, G, B &#x3D; 20, 16, 21</span><br><span class="line"></span><br><span class="line">GPIO.setwarnings(False)</span><br><span class="line">GPIO.setmode(GPIO.BCM)</span><br><span class="line"></span><br><span class="line">GPIO.setup(R, GPIO.OUT)</span><br><span class="line">GPIO.setup(G, GPIO.OUT)</span><br><span class="line">GPIO.setup(B, GPIO.OUT)</span><br><span class="line"></span><br><span class="line">pwmR &#x3D; GPIO.PWM(R, 70)    </span><br><span class="line">pwmG &#x3D; GPIO.PWM(G, 70)</span><br><span class="line">pwmB &#x3D; GPIO.PWM(B, 70)</span><br><span class="line"></span><br><span class="line">pwmR.start(0)</span><br><span class="line">pwmG.start(0)</span><br><span class="line">pwmB.start(0)</span><br><span class="line"></span><br><span class="line">try:</span><br><span class="line">    t &#x3D; 0.5</span><br><span class="line">    while True:</span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">        pwmR.ChangeDutyCycle(100)</span><br><span class="line">        pwmG.ChangeDutyCycle(0)</span><br><span class="line">        pwmB.ChangeDutyCycle(0)</span><br><span class="line">        time.sleep(t)</span><br><span class="line">         </span><br><span class="line">        </span><br><span class="line">        pwmR.ChangeDutyCycle(0)</span><br><span class="line">        pwmG.ChangeDutyCycle(100)</span><br><span class="line">        pwmB.ChangeDutyCycle(0)</span><br><span class="line">        time.sleep(t)</span><br><span class="line">         </span><br><span class="line">        </span><br><span class="line">        pwmR.ChangeDutyCycle(0)</span><br><span class="line">        pwmG.ChangeDutyCycle(0)</span><br><span class="line">        pwmB.ChangeDutyCycle(100)</span><br><span class="line">        time.sleep(t)</span><br><span class="line">         </span><br><span class="line">        </span><br><span class="line">        pwmR.ChangeDutyCycle(100)</span><br><span class="line">        pwmG.ChangeDutyCycle(100)</span><br><span class="line">        pwmB.ChangeDutyCycle(0)</span><br><span class="line">        time.sleep(t)</span><br><span class="line">         </span><br><span class="line">        </span><br><span class="line">        pwmR.ChangeDutyCycle(100)</span><br><span class="line">        pwmG.ChangeDutyCycle(0)</span><br><span class="line">        pwmB.ChangeDutyCycle(100)</span><br><span class="line">        time.sleep(t)</span><br><span class="line">         </span><br><span class="line">        </span><br><span class="line">        pwmR.ChangeDutyCycle(0)</span><br><span class="line">        pwmG.ChangeDutyCycle(100)</span><br><span class="line">        pwmB.ChangeDutyCycle(100)</span><br><span class="line">        time.sleep(t)</span><br><span class="line">         </span><br><span class="line">        </span><br><span class="line">        pwmR.ChangeDutyCycle(100)</span><br><span class="line">        pwmG.ChangeDutyCycle(100)</span><br><span class="line">        pwmB.ChangeDutyCycle(100)</span><br><span class="line">        time.sleep(t)</span><br><span class="line"></span><br><span class="line">        </span><br><span class="line">        for r in range(0, 101, 20):</span><br><span class="line">            pwmR.ChangeDutyCycle(r)</span><br><span class="line">            for g in range(0, 101, 20):</span><br><span class="line">                pwmG.ChangeDutyCycle(g)</span><br><span class="line">                for b in range(0, 101, 20):</span><br><span class="line">                    pwmB.ChangeDutyCycle(b)</span><br><span class="line">                    time.sleep(0.05)</span><br><span class="line"></span><br><span class="line">except KeyboardInterrupt:</span><br><span class="line">    pass</span><br><span class="line"></span><br><span class="line">pwmR.stop()</span><br><span class="line">pwmG.stop()</span><br><span class="line">pwmB.stop()</span><br><span class="line"></span><br><span class="line">GPIO.cleanup()</span><br></pre></td></tr></table></figure>
+
       
     </div>
     <div class="article-footer">
@@ -366,7 +380,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="http://blog.whwtf.com/about/index.html" title="about" target="_blank" rel="external">http://blog.whwtf.com/about/index.html</a>
+      <a href="http://blog.whwtf.com/Linux/SomePi/rpi-rgbled.html" title="在树莓派上操作 rgbLED 显示不同颜色" target="_blank" rel="external">http://blog.whwtf.com/Linux/SomePi/rpi-rgbled.html</a>
     </li>
     
     <li class="post-copyright-license">
@@ -409,6 +423,16 @@
 
   <nav class="bar bar-footer clearfix" data-stick-bottom>
   <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    
+    <li class="next">
+      <a href="/Linux/SomePi/rpi-tm1637.html" title="在树莓派上操作 TM1637 主控的四位数码管"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+  </ul>
   
   
   
@@ -478,6 +502,10 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
 
 
+
+
+
+   
 
 
 

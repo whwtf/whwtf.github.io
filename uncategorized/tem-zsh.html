@@ -17,20 +17,20 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>about | 八九天</title>
-  <meta name="description" content="春暖花开，八九天！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="http://blog.whwtf.com/about/index.html">
+  <title>Linux 终端增强（通过 zsh 与 oh-my-zsh） | 八九天</title>
+  <meta name="description" content="本文适用于 Debian 系 Linux，MacOS 同样可以。首先安装 zsh （这里有详细说明）： 12sudo apt updatesudo apt install zsh  然后，将 zsh 设置为系统默认终端： 1chsh -s $(which zsh)  接下来安装 oh-my-zsh，这是 zsh 的终极扩展和配置工具： 1sh -c &quot;$(wget https:&amp;#x2F">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux 终端增强（通过 zsh 与 oh-my-zsh）">
+<meta property="og:url" content="http://blog.whwtf.com/uncategorized/tem-zsh.html">
 <meta property="og:site_name" content="八九天">
-<meta property="og:description" content="春暖花开，八九天！">
+<meta property="og:description" content="本文适用于 Debian 系 Linux，MacOS 同样可以。首先安装 zsh （这里有详细说明）： 12sudo apt updatesudo apt install zsh  然后，将 zsh 设置为系统默认终端： 1chsh -s $(which zsh)  接下来安装 oh-my-zsh，这是 zsh 的终极扩展和配置工具： 1sh -c &quot;$(wget https:&amp;#x2F">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-04-09T10:21:20.000Z">
-<meta property="article:modified_time" content="2021-04-14T02:54:08.380Z">
+<meta property="article:published_time" content="2021-04-15T03:45:12.000Z">
+<meta property="article:modified_time" content="2021-04-15T03:48:10.269Z">
 <meta property="article:author" content="Whwtf">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://blog.whwtf.com/about/index.html">
+  <link rel="canonical" href="http://blog.whwtf.com/uncategorized/tem-zsh.html">
   
     <link rel="alternate" href="/atom.xml" title="八九天" type="application/atom+xml">
   
@@ -327,14 +327,14 @@
   
 <main class="main" role="main">
   <div class="content">
-  <article id="page-" class="article article-type-page" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-tem-zsh" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      about
+      Linux 终端增强（通过 zsh 与 oh-my-zsh）
     </h1>
   
 
@@ -342,8 +342,8 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/about/index.html" class="article-date">
-	  <time datetime="2021-04-09T10:21:20.000Z" itemprop="datePublished">2021-04-09</time>
+	<a href="/uncategorized/tem-zsh.html" class="article-date">
+	  <time datetime="2021-04-15T03:45:12.000Z" itemprop="datePublished">2021-04-15</time>
 	</a>
 </span>
         
@@ -351,13 +351,50 @@
 
         
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/about/index.html#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/uncategorized/tem-zsh.html#comments" class="article-comment-link">评论</a></span>
         
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        
+        <p>本文适用于 Debian 系 Linux，MacOS 同样可以。<br>首先安装 <a target="_blank" rel="noopener" href="https://www.zsh.org/">zsh</a> （<a target="_blank" rel="noopener" href="https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH">这里</a>有详细说明）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt install zsh</span><br></pre></td></tr></table></figure>
+
+<p>然后，将 zsh 设置为系统默认终端：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chsh -s $(which zsh)</span><br></pre></td></tr></table></figure>
+
+<p>接下来安装 <a target="_blank" rel="noopener" href="https://raw.github.com/ohmyzsh/ohmyzsh/">oh-my-zsh</a>，这是 zsh 的终极扩展和配置工具：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh -c &quot;$(wget https:&#x2F;&#x2F;raw.github.com&#x2F;ohmyzsh&#x2F;ohmyzsh&#x2F;master&#x2F;tools&#x2F;install.sh -O -)&quot;</span><br></pre></td></tr></table></figure>
+
+<p>oh-my-zsh 的美丽外观得益于其自带的许多主题，但是其中很多需要 <a target="_blank" rel="noopener" href="https://github.com/powerline/fonts">Poweline-fonts</a>，所以海需要安装：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install fonts-powerline</span><br></pre></td></tr></table></figure>
+
+<p>现在可以通过修改 on-my-zsh 的配置文件来选择一个喜欢的主题了（<a target="_blank" rel="noopener" href="https://github.com/ohmyzsh/ohmyzsh/wiki/Themes">这里</a>有内置所有主题的预览）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nano ~&#x2F;.zshrc</span><br></pre></td></tr></table></figure>
+
+<p>找到主题定义这一行，是这样的：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ZSH_THEME&#x3D;&quot;agnoster&quot;  # agnoster是个人喜欢的</span><br></pre></td></tr></table></figure>
+
+<p>oh-my-zsh 同样支持非常多的插件来扩展功能，同样在. zshrc 配置文件中：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nano ~&#x2F;.zshrc</span><br></pre></td></tr></table></figure>
+
+<p>找到：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plugins&#x3D;(git)  # 默认只启用了git插件</span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins">这里</a>有所有插件列表及介绍。<br>还有一些功能插件不是内置的，需要手动安装。<br>1、zsh-syntax-highlighting，让 zsh 拥有了语法高亮功能</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install zsh-syntax-highlighting</span><br></pre></td></tr></table></figure>
+
+<p>然后修改配置文件，在末尾增加一行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source &#x2F;usr&#x2F;share&#x2F;zsh-syntax-highlighting&#x2F;zsh-syntax-highlighting.zsh</span><br></pre></td></tr></table></figure>
+
+<p>2、zsh-autosuggestions，记录曾经输入过的命令，方便重复输入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;zsh-users&#x2F;zsh-autosuggestions.git</span><br><span class="line">sudo cp -r zsh-autosuggestions &#x2F;usr&#x2F;share&#x2F;</span><br></pre></td></tr></table></figure>
+
+<p>修改配置文件，在末尾添加：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source &#x2F;usr&#x2F;share&#x2F;zsh-autosuggestions&#x2F;zsh-autosuggestions.zsh</span><br></pre></td></tr></table></figure>
+
+<p>大功告成，现在退出终端，注销用户然后重新登录，就可以打开增强之后的终端了。</p>
+
       
     </div>
     <div class="article-footer">
@@ -366,7 +403,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="http://blog.whwtf.com/about/index.html" title="about" target="_blank" rel="external">http://blog.whwtf.com/about/index.html</a>
+      <a href="http://blog.whwtf.com/uncategorized/tem-zsh.html" title="Linux 终端增强（通过 zsh 与 oh-my-zsh）" target="_blank" rel="external">http://blog.whwtf.com/uncategorized/tem-zsh.html</a>
     </li>
     
     <li class="post-copyright-license">
@@ -409,6 +446,20 @@
 
   <nav class="bar bar-footer clearfix" data-stick-bottom>
   <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/Linux/SomePi/rpi-tm1637.html" title="在树莓派上操作 TM1637 主控的四位数码管"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="/Programing/DataBase/mysql-base.html" title="MySql基础学习"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+  </ul>
   
   
   
@@ -478,6 +529,10 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
 
 
+
+
+
+   
 
 
 
