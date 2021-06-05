@@ -6,7 +6,7 @@
   <link href="http://blog.whwtf.com/atom.xml" rel="self"/>
   
   <link href="http://blog.whwtf.com/"/>
-  <updated>2021-04-15T03:53:39.277Z</updated>
+  <updated>2021-06-05T02:57:06.141Z</updated>
   <id>http://blog.whwtf.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>部署 Code-Server，随时随地 VsCode</title>
+    <link href="http://blog.whwtf.com/Programing/deploy-code-server.html"/>
+    <id>http://blog.whwtf.com/Programing/deploy-code-server.html</id>
+    <published>2021-06-05T02:22:20.000Z</published>
+    <updated>2021-06-05T02:57:06.141Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://github.com/cdr/code-server">Code-Server</a> 是一个可以在远程服务器上运行 VS Code 的工具。拥有与 VS Code 完全相同的界面和使用方法。</p><p><img src="https://gitee.com/whwtf/upic/raw/master/uPic/codee.jpeg"></p><p>将其部署在远程服务器上，就可以通过 Edge、Chrome 等浏览器在任何设备上运用完全一致的环境进行写作与开发，一切计算都在服务器上进行，不用考虑终端设备的性能。</p><p>在<a href="https://github.com/cdr/code-server/releases">Releases</a>页面找到相应的 rpm 或者 deb 软件包下载并上传到远程服务器（也可以直接在服务器上使用 wget 等工具直接下载）并安装。</p><p>然后，创建 ～/.config/code-server/config.yaml 文件，内容如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">bind-addr: 0.0.0.0:8999        #远程访问的端口</span><br><span class="line">auth: password</span><br><span class="line">password: xxxxxxxxx            #访问时登陆的密码</span><br><span class="line">cert: true                     #启用https，不然有些功能限制使用</span><br></pre></td></tr></table></figure><p>编辑 /lib/systemd/system/code-server@.service 文件，内容修改如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description&#x3D;code-server</span><br><span class="line">After&#x3D;network.target</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">Type&#x3D;exec</span><br><span class="line">ExecStart&#x3D;&#x2F;usr&#x2F;bin&#x2F;code-server --cert 公钥 --cert-key 私钥</span><br><span class="line">ExecReload&#x3D;&#x2F;usr&#x2F;bin&#x2F;code-server --cert 公钥 --cert-key 私钥</span><br><span class="line">Restart&#x3D;always</span><br><span class="line">User&#x3D;%i</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy&#x3D;default.target</span><br></pre></td></tr></table></figure><p>保存退出后，执行如下命令：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl enable --now code-server@username    #username替换成当前登陆用户名</span><br></pre></td></tr></table></figure><p>之后，就可以在浏览器中使用 https://服务器ip:设定的端口 的形式来访问 code-server 了。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/cdr/code-server&quot;&gt;Code-Server&lt;/a&gt; 是一个可以在远程服务器上运行 VS Code 的工具。拥有与 VS Code 完全相同的界面和使用方法。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https:</summary>
+      
+    
+    
+    
+    <category term="Programing" scheme="http://blog.whwtf.com/categories/Programing/"/>
+    
+    
+    <category term="Code-Server" scheme="http://blog.whwtf.com/tags/Code-Server/"/>
+    
+  </entry>
   
   <entry>
     <title>在树莓派上操作 rgbLED 显示不同颜色</title>

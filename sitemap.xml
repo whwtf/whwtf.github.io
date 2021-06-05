@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.whwtf.com/Programing/deploy-code-server.html</loc>
+    
+    <lastmod>2021-06-05</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.whwtf.com/Linux/SomePi/rpi-tm1637.html</loc>
     
     <lastmod>2021-04-15</lastmod>
@@ -67,7 +74,7 @@
 
   <url>
     <loc>http://blog.whwtf.com/</loc>
-    <lastmod>2021-04-15</lastmod>
+    <lastmod>2021-06-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -75,49 +82,56 @@
   
   <url>
     <loc>http://blog.whwtf.com/tags/Armbian/</loc>
-    <lastmod>2021-04-15</lastmod>
+    <lastmod>2021-06-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.whwtf.com/tags/MySQL/</loc>
-    <lastmod>2021-04-15</lastmod>
+    <lastmod>2021-06-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.whwtf.com/tags/Python/</loc>
-    <lastmod>2021-04-15</lastmod>
+    <lastmod>2021-06-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.whwtf.com/tags/Pipenv/</loc>
-    <lastmod>2021-04-15</lastmod>
+    <lastmod>2021-06-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.whwtf.com/tags/RaspberryPi/</loc>
-    <lastmod>2021-04-15</lastmod>
+    <lastmod>2021-06-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.whwtf.com/tags/rgbLED/</loc>
-    <lastmod>2021-04-15</lastmod>
+    <lastmod>2021-06-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.whwtf.com/tags/TM-1637/</loc>
-    <lastmod>2021-04-15</lastmod>
+    <lastmod>2021-06-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.whwtf.com/tags/Code-Server/</loc>
+    <lastmod>2021-06-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -126,35 +140,35 @@
   
   <url>
     <loc>http://blog.whwtf.com/categories/Linux/</loc>
-    <lastmod>2021-04-15</lastmod>
+    <lastmod>2021-06-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.whwtf.com/categories/Programing/</loc>
-    <lastmod>2021-04-15</lastmod>
+    <lastmod>2021-06-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.whwtf.com/categories/Linux/SomePi/</loc>
-    <lastmod>2021-04-15</lastmod>
+    <lastmod>2021-06-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.whwtf.com/categories/Programing/DataBase/</loc>
-    <lastmod>2021-04-15</lastmod>
+    <lastmod>2021-06-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.whwtf.com/categories/Programing/Python/</loc>
-    <lastmod>2021-04-15</lastmod>
+    <lastmod>2021-06-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
