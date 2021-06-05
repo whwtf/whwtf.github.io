@@ -104,5 +104,5 @@ theme: pure
 deploy:
   type: 'git'
   repo:
-    # gitee: git@gitee.com:whwtf/whwtf.git,master
+    gitee: git@gitee.com:whwtf/whwtf.git,master
     github: git@github.com:whwtf/whwtf.github.io.git,master
